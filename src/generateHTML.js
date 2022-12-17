@@ -3,14 +3,14 @@ const generateManagerHTML = manager => { //Layout from Bootstrap site - altered 
     return ` 
     <div class= "card teamCard">
         <div class= "card-header text-white bg-info>
-            <h2 class= "card-title"> ${manager.getName()} </h2>
-            <h3 class= "card-title"> ${manager.getRole()} </h3>
+            <h2 class= "card-title"> ${manager.name}</h2>
+            <h3 class= "card-title"> Manager </h3>
         </div>
         <div class= "card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"> Identification: ${manager.getID()} </li>
-                <li class="list-group-item"> Contact via Email: ${manager.getEmail()} </li>
-                <li class="list-group-item"> Office Number: ${manager.getOfficeNumber()} </li>
+            <ul class="list-group">
+                <li class="list-group-item"> Identification: ${manager.id} </li>
+                <li class="list-group-item"> Contact via Email: ${manager.email} </li>
+                <li class="list-group-item"> Office Number: ${manager.officeNumber} </li>
             </ul>
         </div>
     </div>
@@ -22,14 +22,14 @@ const generateEngineerHTML = engineer => { //All team member sections are copied
     return ` 
     <div class= "card teamCard">
         <div class= "card-header text-white bg-dark>
-            <h2 class= "card-title"> ${engineer.getName()} </h2>
-            <h3 class= "card-title"> ${engineer.getRole()} </h3>
+            <h2 class= "card-title"> ${engineer.name}</h2>
+            <h3 class= "card-title"> Engineer </h3>
         </div>
         <div class= "card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"> Identification: ${engineer.getID()} </li>
-                <li class="list-group-item"> Contact via Email: ${engineer.getEmail()} </li>
-                <li class="list-group-item"> Github Profile: ${engineer.getGithub()} </li>
+            <ul class="list-group">
+                <li class="list-group-item"> Identification: ${engineer.id} </li>
+                <li class="list-group-item"> Contact via Email: ${engineer.email} </li>
+                <li class="list-group-item"> Github Profile: ${engineer.github} </li>
             </ul>
         </div>
     </div>
@@ -41,14 +41,14 @@ const generateInternHTML = intern => {
     return ` 
     <div class= "card teamCard">
         <div class= "card-header text-white bg-success>
-            <h2 class= "card-title"> ${intern.getName()} </h2>
-            <h3 class= "card-title"> ${intern.getRole()} </h3>
+            <h2 class= "card-title"> ${intern.name}</h2>
+            <h3 class= "card-title"> Intern </h3>
         </div>
         <div class= "card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"> Identification: ${intern.getID()} </li>
-                <li class="list-group-item"> Contact via Email: ${intern.getEmail()} </li>
-                <li class="list-group-item"> School: ${manager.getSchool()} </li>
+            <ul class="list-group">
+                <li class="list-group-item"> Identification: ${intern.id} </li>
+                <li class="list-group-item"> Contact via Email: ${intern.email} </li>
+                <li class="list-group-item"> School: ${intern.school} </li>
             </ul>
         </div> 
     </div>
@@ -74,7 +74,7 @@ generateHTMLPage = (data) => {
         }
 
         if(role ==='Intern') {
-            const internSection = generateInternHTML(intern);
+            const internSection = generateInternHTML(employee);
             htmlArray.push(internSection);
         }
     }
@@ -97,13 +97,13 @@ const generateCompleteHTML = (allTeamMembers) => {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
             integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./dist/style.css" />
         <title> Employee Team </title>
     </head>
 
     <body> 
         <header class="jumbotron bg-primary">
-            <h1 class="display-3 text-white"> All Team Members</h1>
+            <h1 class="display-3 text-white text-center"> All Team Members</h1>
             <p class="subheader text-white">Below, you will find all members and their associated positions!</p>
         </header>
     
@@ -125,5 +125,6 @@ const generateCompleteHTML = (allTeamMembers) => {
 };
 
 //export to be used in index.js
-module.exports = htmlTemplate;
+module.exports = generateHTMLPage;
+
 
