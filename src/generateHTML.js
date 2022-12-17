@@ -2,7 +2,7 @@
 const generateManagerHTML = manager => { //Layout from Bootstrap site - altered to fit use
     return ` 
     <div class= "card teamCard">
-        <div class= "card-header text-white bg-info>
+        <div class= "card-header text-white bg-info">
             <h2 class= "card-title"> ${manager.name}</h2>
             <h3 class= "card-title"> Manager </h3>
         </div>
@@ -21,7 +21,7 @@ const generateManagerHTML = manager => { //Layout from Bootstrap site - altered 
 const generateEngineerHTML = engineer => { //All team member sections are copied from the manager section and changed to fit relavent info - colors change as well 
     return ` 
     <div class= "card teamCard">
-        <div class= "card-header text-white bg-dark>
+        <div class= "card-header text-white bg-dark">
             <h2 class= "card-title"> ${engineer.name}</h2>
             <h3 class= "card-title"> Engineer </h3>
         </div>
@@ -40,7 +40,7 @@ const generateEngineerHTML = engineer => { //All team member sections are copied
 const generateInternHTML = intern => { 
     return ` 
     <div class= "card teamCard">
-        <div class= "card-header text-white bg-success>
+        <div class= "card-header text-white bg-success">
             <h2 class= "card-title"> ${intern.name}</h2>
             <h3 class= "card-title"> Intern </h3>
         </div>
@@ -104,7 +104,7 @@ const generateCompleteHTML = (allTeamMembers) => {
     <body> 
         <header class="jumbotron bg-primary">
             <h1 class="display-3 text-white text-center"> All Team Members</h1>
-            <p class="subheader text-white">Below, you will find all members and their associated positions!</p>
+            <p class="subheader text-white text-center">Below, you will find all members and their associated positions!</p>
         </header>
     
 
