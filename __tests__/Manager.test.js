@@ -12,3 +12,8 @@ test('Using getOfficeNumber', () =>{
     expect(testEmployee.getOfficeNumber()).toBe(officeNumber)
 });
 
+test('Using getRole', () => {
+    const roleTest = "Manager"
+    const testEmployee = new Manager ("Josh", 100, "joshmanager@gmail.com", 2);
+    expect(testEmployee.getRole()).toBe(roleTest);
+})
