@@ -29,7 +29,7 @@ const generateEngineerHTML = engineer => { //All team member sections are copied
             <ul class="list-group">
                 <li class="list-group-item"> Identification: ${engineer.id} </li>
                 <li class="list-group-item"> Contact via Email: ${engineer.email} </li>
-                <li class="list-group-item"> Github Profile: ${engineer.github} </li>
+                <li class="list-group-item"> <a href =https://github.com/${engineer.github} Github Profile: ${engineer.github} </a> </li>
             </ul>
         </div>
     </div>

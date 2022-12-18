@@ -38,7 +38,7 @@
   ## Questions 
   Thank you for your interest in my application, Challenge 10 - Team Profile Generator ! 
   If you have any questions, concerns, or would like to reach out for any other reason;
-  My Github: JoshuaOrlando
+  My Github: https://github.com/JoshuaOrlandoR
   My Email: joshuaorlando.r@gmail.com
 
 
